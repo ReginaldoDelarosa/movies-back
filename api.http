@@ -1,0 +1,31 @@
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "The good, the bad and the uglyXDD",
+    "year": 1999, 
+    "director": "Sergio Leone",
+    "duration": 222,
+    "poster": "https://images.mubicdn.net/images/film/163/cache-90886-1565833888/image-w1280.jpg",
+    "genre": ["Action",
+            "Western"],
+    "rate": 8.9
+    
+}
+###update Movie
+PATCH http://localhost:3000/movies/8ea70616-70fc-4327-b985-22ad42729946
+Content-Type: application/json
+
+{
+    "rate": 10
+}
+
+###get movie
+
+GET http://localhost:3000/movies/65ed1590-c09c-11ee-8911-00155d010500
+
+###get all movies
+GET http://localhost:3000/movies
+
+###by genre
+GET http://localhost:3000/movies?genre=Drama
